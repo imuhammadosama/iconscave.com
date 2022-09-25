@@ -2,6 +2,7 @@ import './Header.css';
 export default function () {
   return (
     <div className='header'>
+      <div className='instructions'>Click to Copy Icon</div>
       <div className='logo'>
         <svg
           width='105'
@@ -15,7 +16,7 @@ export default function () {
           <path d='M51.5 0L70.1195 31.5H32.8805L51.5 0Z' fill='#333333' />
         </svg>
       </div>
-      <div className='credits'>Built by @imuhammadosama</div>
+      <div className='credits'>Built with ❤️ by @imuhammadosama</div>
     </div>
   );
 }

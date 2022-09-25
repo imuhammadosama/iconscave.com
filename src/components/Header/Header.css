@@ -1,17 +1,29 @@
 .header {
   text-align: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
   padding-top: 32px;
   max-width: 1098px;
 }
 
+.header > div {
+  flex-grow: 1;
+  width: 33%;
+}
+
 .credits {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-  font-weight: 900;
-  letter-spacing: -0.6px;
-  padding-right: 32px;
+  font-weight: 600;
+
+  padding-right: 24px;
+}
+
+.instructions {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-weight: 600;
 }
