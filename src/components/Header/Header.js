@@ -16,7 +16,15 @@ export default function () {
           <path d='M51.5 0L70.1195 31.5H32.8805L51.5 0Z' fill='#333333' />
         </svg>
       </div>
-      <div className='credits'>Built with ❤️ by @imuhammadosama</div>
+      <div className='credits'>
+        Powered by &nbsp;
+        <a
+          href='https://imuhammadosama.com'
+          style={{ textDecoration: 'none', color: '#4608AD' }}
+        >
+          imuhammadosama.com
+        </a>
+      </div>
     </div>
   );
 }
