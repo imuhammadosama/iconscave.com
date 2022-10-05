@@ -2,7 +2,7 @@ import './Header.css';
 export default function () {
   return (
     <div className='header'>
-      <div className='instructions'>Click to Copy Icon</div>
+      <div className='instructions'></div>
       <div className='logo'>
         <svg
           width='105'
@@ -16,15 +16,7 @@ export default function () {
           <path d='M51.5 0L70.1195 31.5H32.8805L51.5 0Z' fill='#333333' />
         </svg>
       </div>
-      <div className='credits'>
-        Powered by &nbsp;
-        <a
-          href='https://imuhammadosama.com'
-          style={{ textDecoration: 'none', color: '#4608AD' }}
-        >
-          imuhammadosama.com
-        </a>
-      </div>
+      <div className='credits'></div>
     </div>
   );
 }

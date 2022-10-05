@@ -115,7 +115,7 @@ export default function Anron() {
         </div>
       </div>
       <div>
-        <div className='flex flex-wrap mb-24'>
+        <div className='flex flex-wrap mb-24 space-between'>
           {categories.map((category) => (
             <div
               className={

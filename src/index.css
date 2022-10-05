@@ -173,9 +173,12 @@ code {
   flex-wrap: wrap;
   font-size: 10px;
   border: 1px solid #f5f5f5;
-  border-radius: 25px;
-  margin-right: 8px;
+  border-radius: 6px;
   transition: 0.2s;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .tag:hover {
