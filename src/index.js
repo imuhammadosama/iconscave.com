@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/Header/Header';
 import './index.css';
-import Anron from './pages/Anron';
+import Home from './pages/Home';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Header />
-    <Anron />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
