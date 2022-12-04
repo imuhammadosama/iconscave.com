@@ -1,5 +1,6 @@
 import './Home.css';
 import { icons } from '../data/anron';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
   function download(iconName) {
@@ -12,6 +13,17 @@ export default function Home() {
     a.dispatchEvent(e);
   }
 
+  const [oldIcons, setOldIcons] = useState(icons);
+  const [newIcons, setNewIcons] = useState(oldIcons);
+  const [searchValue, setSearchValue] = useState('');
+
+  useEffect(() => {
+    const filteredIcons = oldIcons.filter((icon) => {
+      return icon.name.includes(searchValue);
+    });
+    setNewIcons(filteredIcons);
+  }, [searchValue]);
+
   return (
     <div className='content'>
       <div className='header'>
@@ -19,11 +31,17 @@ export default function Home() {
           <img src='http://res.cloudinary.com/dvwpbbisf/image/upload/q_auto:eco/v1670158090/ttcvdqvu3vpziejf5hvw.webp' />
         </div>
         <div className='search'>
-          <input className='search-input' placeholder='Search an icon...' />
+          <input
+            className='search-input'
+            placeholder='Search an icon...'
+            onChange={(e) => {
+              setSearchValue(e.target.value);
+            }}
+          />
         </div>
       </div>
       <div className='icons'>
-        {icons.map((icon) => {
+        {newIcons.map((icon) => {
           return (
             <div className='icon'>
               <div className='icon-svg'>
