@@ -40,7 +40,7 @@ input:focus::-webkit-input-placeholder {
   font-style: italic;
   padding-left: 50px;
   box-shadow: 0 5px 15px -10px #00000021, 0 2px 5px -2px #00000029;
-  width: 300px;
+  width: 100%;
 }
 
 #search-input:hover {
@@ -54,4 +54,15 @@ input:focus::-webkit-input-placeholder {
   border-color: #4b4b4b;
   color: #4b4b4b;
   font-style: normal;
+}
+
+.search-select {
+  position: absolute;
+  top: 13px;
+  right: -40px;
+  font-family: var(--font);
+  border: 0px;
+  outline: none;
+  border-left: 1px solid #e1e1e1;
+  padding-left: 10px;
 }

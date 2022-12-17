@@ -1,5 +1,6 @@
 import searchIcon from '../assets/icons/search.svg';
 import { anron } from '../data/anron';
+import { feather } from '../data/feather';
 
 import '../assets/styles/search.css';
 import '../assets/styles/icons.css';
@@ -10,7 +11,7 @@ export default function Home() {
   const [oldIcons, setOldIcons] = useState(selectedSet);
   const [newIcons, setNewIcons] = useState(selectedSet);
   const [categories, setCategories] = useState(
-    selectedSet
+    oldIcons
       .map((icon) => {
         return icon.category;
       })
@@ -24,6 +25,16 @@ export default function Home() {
     });
     setNewIcons(filteredIcons);
   }, [searchValue]);
+
+  useEffect(() => {
+    setCategories(
+      newIcons
+        .map((icon) => {
+          return icon.category;
+        })
+        .filter((value, index, self) => self.indexOf(value) === index)
+    );
+  }, [oldIcons]);
 
   function download(iconTitle) {
     const svg = document.querySelector(`#icon-${iconTitle}`);
@@ -55,11 +66,29 @@ export default function Home() {
             }}
           ></input>
           <img src={searchIcon} id='search-icon' />
+          <select
+            className='search-select'
+            onChange={(e) => {
+              if (e.target.value === 'feather') {
+                setNewIcons(feather);
+                setOldIcons(feather);
+              } else {
+                setNewIcons(anron);
+                setOldIcons(anron);
+              }
+            }}
+          >
+            <option value='anron'>Anron</option>
+            <option value='feather'>Feather</option>
+          </select>
         </div>
       </div>
       {/* Search Field Ends */}
       <div id='icons'>
         <div id='icons-filters'>
+          <div className='icons-filter' onClick={() => setNewIcons(oldIcons)}>
+            All
+          </div>
           {categories.map((filter) => {
             return (
               <div className='icons-filter' onClick={() => filterIcon(filter)}>
