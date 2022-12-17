@@ -1,4 +1,40 @@
+#icons {
+  display: flex;
+}
+
+#icons-filters {
+  min-width: 234px;
+  height: fit-content;
+  font-family: var(--font);
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  background-color: white;
+  padding: 10px 10px;
+  font-size: 1rem;
+  width: 150px;
+  margin-right: 8px;
+  float: left;
+  position: sticky;
+  top: 20px; /* the offset */
+}
+.icons-filter {
+  padding: 10px 10px;
+}
+
+.icons-filter:hover {
+  background-color: var(--background-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#icons-images {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-flow: row wrap;
+}
+
 .icon {
+  flex-grow: 1;
   font-family: var(--font);
   border-radius: 10px;
   border: 1px solid #e1e1e1;
@@ -13,59 +49,62 @@
   justify-content: center;
   position: relative;
   transition: 0.2s;
+  margin-bottom: 8px;
+  margin-right: 8px;
 }
 .icon:hover {
   transform: translateY(-4px);
 }
 
-.icon:hover #icon-download {
+.icon:hover .icon-download {
   visibility: visible;
   opacity: 1;
 }
 
-.icon:hover #icon-copy {
+.icon:hover .icon-copy {
   visibility: visible;
   opacity: 1;
 }
 
 .icon:hover .icon-svg {
-  transform: translateY(-2px);
+  transform: translateY(-6px);
 }
 
 .icon:hover .icon-title {
-  transform: translateY(-0.5px);
+  transform: translateY(-3px);
 }
 
-#icon-download,
-#icon-copy {
+.icon-download,
+.icon-copy {
   position: absolute;
   cursor: pointer;
   visibility: hidden;
-  bottom: 8px;
+  top: 10px;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.7s;
 }
 
-#icon-copy {
+.icon-copy {
   right: 13px;
 }
 
-#icon-download {
+.icon-download {
   left: 10px;
 }
 
 .icon-svg {
   padding-bottom: 24px;
-  transition: 0.2s;
+  transition: 0.7s;
 }
 
 .icon-title {
-  transition: 0.2s;
+  transition: 1s;
+  cursor: default;
 }
 
 /* Animations */
 
-/* @keyframes icon-download-animation {
+@keyframes icon-download-animation {
   0% {
     transform: translateY(5px);
   }
@@ -77,7 +116,7 @@
   }
 }
 
-#icon-download:hover {
+.icon-download:hover {
   animation: icon-download-animation 1s infinite;
 }
 
@@ -90,6 +129,6 @@
   }
 }
 
-#icon-copy:hover {
+.icon-copy:hover {
   animation: icon-copy-animation 1s forwards;
-} */
+}
