@@ -3,6 +3,7 @@ import { anron } from '../data/anron';
 import { feather } from '../data/feather';
 import { social } from '../data/social';
 
+import '../assets/styles/header.css';
 import '../assets/styles/search.css';
 import '../assets/styles/icons.css';
 import { useEffect, useState } from 'react';
@@ -56,7 +57,29 @@ export default function Home() {
 
   return (
     <div>
-      <div></div>
+      <div className='logo'>
+        <svg
+          width='105'
+          height='32'
+          viewBox='0 0 105 32'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <g clip-path='url(#clip0_1_2)'>
+            <path d='M105 0H73V32H105V0Z' fill='#333333' />
+            <path
+              d='M32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16Z'
+              fill='#333333'
+            />
+            <path d='M51.5 0L70.1195 31.5H32.8805L51.5 0Z' fill='#333333' />
+          </g>
+          <defs>
+            <clipPath id='clip0_1_2'>
+              <rect width='105' height='32' fill='white' />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
       {/* Search Field Starts */}
       <div className='search'>
         <div className='search-field'>
