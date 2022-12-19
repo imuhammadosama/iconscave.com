@@ -1,6 +1,7 @@
 import searchIcon from '../assets/icons/search.svg';
 import { anron } from '../data/anron';
 import { feather } from '../data/feather';
+import { social } from '../data/social';
 
 import '../assets/styles/search.css';
 import '../assets/styles/icons.css';
@@ -72,6 +73,9 @@ export default function Home() {
               if (e.target.value === 'feather') {
                 setNewIcons(feather);
                 setOldIcons(feather);
+              } else if (e.target.value === 'social') {
+                setNewIcons(social);
+                setOldIcons(social);
               } else {
                 setNewIcons(anron);
                 setOldIcons(anron);
@@ -79,6 +83,7 @@ export default function Home() {
             }}
           >
             <option value='anron'>Anron</option>
+            <option value='social'>Social</option>
             <option value='feather'>Feather</option>
           </select>
         </div>
