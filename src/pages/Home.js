@@ -56,6 +56,7 @@ export default function Home() {
 
   return (
     <div>
+      <div></div>
       {/* Search Field Starts */}
       <div className='search'>
         <div className='search-field'>
