@@ -12,11 +12,12 @@ input:focus::-webkit-input-placeholder {
 .search {
   display: flex;
   justify-content: center;
-  margin-top: 64px;
-  margin-bottom: 48px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   position: sticky;
-  top: 20px; /* the offset */
+  top: 0px; /* the offset */
   z-index: 1;
+  background-color: #f5f5f5;
 }
 
 .search-field {
