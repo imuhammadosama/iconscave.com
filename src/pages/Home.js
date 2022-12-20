@@ -57,28 +57,58 @@ export default function Home() {
 
   return (
     <div>
-      <div className='logo'>
-        <svg
-          width='105'
-          height='32'
-          viewBox='0 0 105 32'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
+      <div className='header'>
+        <div
+          className='contact'
+          onClick={() => window.open('https://imuhammadosama.com/')}
         >
-          <g clip-path='url(#clip0_1_2)'>
-            <path d='M105 0H73V32H105V0Z' fill='#333333' />
+          Built by imuhammadosama.com
+        </div>
+        <div className='logo' onClick={() => setSearchValue('')}>
+          <svg
+            width='105'
+            height='32'
+            viewBox='0 0 105 32'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <g clip-path='url(#clip0_1_2)'>
+              <path d='M105 0H73V32H105V0Z' fill='#333333' />
+              <path
+                d='M32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16Z'
+                fill='#333333'
+              />
+              <path d='M51.5 0L70.1195 31.5H32.8805L51.5 0Z' fill='#333333' />
+            </g>
+            <defs>
+              <clipPath id='clip0_1_2'>
+                <rect width='105' height='32' fill='white' />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <div
+          className='credits'
+          onClick={() => {
+            window.open('https://fiverr.com/imuhammadosama');
+          }}
+        >
+          Need a website? Hire me
+          <svg
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
             <path
-              d='M32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16Z'
-              fill='#333333'
+              fill-rule='evenodd'
+              clip-rule='evenodd'
+              d='M9 4.75C8.58579 4.75 8.25 4.41421 8.25 4C8.25 3.58579 8.58579 3.25 9 3.25H20C20.4142 3.25 20.75 3.58579 20.75 4V15C20.75 15.4142 20.4142 15.75 20 15.75C19.5858 15.75 19.25 15.4142 19.25 15V5.81066L4.53033 20.5303C4.23744 20.8232 3.76256 20.8232 3.46967 20.5303C3.17678 20.2374 3.17678 19.7626 3.46967 19.4697L18.1893 4.75H9Z'
+              fill='#22272F'
             />
-            <path d='M51.5 0L70.1195 31.5H32.8805L51.5 0Z' fill='#333333' />
-          </g>
-          <defs>
-            <clipPath id='clip0_1_2'>
-              <rect width='105' height='32' fill='white' />
-            </clipPath>
-          </defs>
-        </svg>
+          </svg>
+        </div>
       </div>
       {/* Search Field Starts */}
       <div className='search'>
@@ -86,6 +116,7 @@ export default function Home() {
           <input
             id='search-input'
             placeholder='Search icons'
+            value={searchValue}
             onChange={(e) => {
               setSearchValue(e.target.value);
             }}

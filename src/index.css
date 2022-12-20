@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/gilroy.woff') format('woff');
+  font-weight: normal;
+}
+
 :root {
   --background-color: #f5f5f5;
   --font: 'Gilroy';
