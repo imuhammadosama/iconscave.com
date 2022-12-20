@@ -52,6 +52,9 @@
   transition: 0.2s;
   margin-bottom: 8px;
   margin-right: 8px;
+  padding-right: 13px;
+  padding-left: 13px;
+  text-align: center;
 }
 .icon:hover {
   transform: translateY(-4px);
@@ -101,6 +104,7 @@
 .icon-title {
   transition: 1s;
   cursor: default;
+  font-size: 100%;
 }
 
 /* Animations */
@@ -123,10 +127,11 @@
 
 @keyframes icon-copy-animation {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
+
   100% {
-    transform: scale(1.5);
+    transform: rotate(45deg);
   }
 }
 

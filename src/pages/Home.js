@@ -2,6 +2,7 @@ import searchIcon from '../assets/icons/search.svg';
 import { anron } from '../data/anron';
 import { feather } from '../data/feather';
 import { social } from '../data/social';
+import { firefly } from '../data/firefly';
 
 import '../assets/styles/header.css';
 import '../assets/styles/search.css';
@@ -131,6 +132,9 @@ export default function Home() {
               } else if (e.target.value === 'social') {
                 setNewIcons(social);
                 setOldIcons(social);
+              } else if (e.target.value === 'firefly') {
+                setNewIcons(firefly);
+                setOldIcons(firefly);
               } else {
                 setNewIcons(anron);
                 setOldIcons(anron);
@@ -138,6 +142,7 @@ export default function Home() {
             }}
           >
             <option value='anron'>Anron</option>
+            <option value='firefly'>Firefly</option>
             <option value='social'>Social</option>
             <option value='feather'>Feather</option>
           </select>
