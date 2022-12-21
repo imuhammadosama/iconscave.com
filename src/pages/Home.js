@@ -135,12 +135,16 @@ export default function Home() {
               } else if (e.target.value === 'firefly') {
                 setNewIcons(firefly);
                 setOldIcons(firefly);
+              } else if (e.target.value === 'anron') {
+                setNewIcons(anron);
+                setOldIcons(anron);
               }
             }}
           >
             <option value='feather'>Feather</option>
             <option value='firefly'>Firefly</option>
             <option value='social'>Social</option>
+            <option value='anron'>Anron</option>
           </select>
         </div>
       </div>
