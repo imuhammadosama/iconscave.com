@@ -15,7 +15,7 @@ input:focus::-webkit-input-placeholder {
   padding-top: 24px;
   padding-bottom: 24px;
   position: sticky;
-  top: 0px; /* the offset */
+  top: 0px;
   z-index: 1;
 }
 
