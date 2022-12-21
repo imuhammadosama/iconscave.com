@@ -10,7 +10,7 @@ import '../assets/styles/icons.css';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [selectedSet, setSelectedSet] = useState(anron);
+  const [selectedSet, setSelectedSet] = useState(feather);
   const [oldIcons, setOldIcons] = useState(selectedSet);
   const [newIcons, setNewIcons] = useState(selectedSet);
   const [categories, setCategories] = useState(
@@ -135,16 +135,12 @@ export default function Home() {
               } else if (e.target.value === 'firefly') {
                 setNewIcons(firefly);
                 setOldIcons(firefly);
-              } else {
-                setNewIcons(anron);
-                setOldIcons(anron);
               }
             }}
           >
-            <option value='anron'>Anron</option>
+            <option value='feather'>Feather</option>
             <option value='firefly'>Firefly</option>
             <option value='social'>Social</option>
-            <option value='feather'>Feather</option>
           </select>
         </div>
       </div>

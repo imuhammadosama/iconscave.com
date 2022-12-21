@@ -17,7 +17,6 @@ input:focus::-webkit-input-placeholder {
   position: sticky;
   top: 0px; /* the offset */
   z-index: 1;
-  background-color: #f5f5f5;
 }
 
 .search-field {
